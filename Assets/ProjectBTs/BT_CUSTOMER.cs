@@ -4,10 +4,8 @@ using BTs;
 [CreateAssetMenu(fileName = "BT_CUSTOMER", menuName = "Behaviour Trees/BT_CUSTOMER", order = 1)]
 public class BT_CUSTOMER : BehaviourTree
 {
-   
     public override void OnConstruction()
     {
-
         Parallel child1 = new ParallelAnd(
             new ACTION_Arrive("storeEntrance"),
             new ACTION_Utter("9", "2")
@@ -15,7 +13,7 @@ public class BT_CUSTOMER : BehaviourTree
         Action child2 = new ACTION_Utter("0", "2");
         RepeatUntilSuccessDecorator child3 = new RepeatUntilSuccessDecorator(
            new CONDITION_EngagedInDialog()
-        ); 
+        );
         RepeatUntilFailureDecorator child4 = new RepeatUntilFailureDecorator(
             new CONDITION_EngagedInDialog()
         );

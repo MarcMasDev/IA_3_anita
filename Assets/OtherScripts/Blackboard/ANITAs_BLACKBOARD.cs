@@ -39,10 +39,10 @@ public class ANITAs_BLACKBOARD : Blackboard, IDialogSystem
         "What a pity!!! None left!",
         "Waiting for a customer..." // 16
     };
-    
-   
+
     void Start()
     {
+     //   GetCustomer();
         theStoreEntrance = GameObject.Find("storeEntrance");
         theFrontOfDesk = GameObject.Find("frontDesk");
         utteranceBubble = gameObject.transform.GetChild(0).gameObject;
@@ -127,8 +127,6 @@ public class ANITAs_BLACKBOARD : Blackboard, IDialogSystem
         throw new System.NotImplementedException();
     }
 
-
-
     public string Ask(int index, bool utter)
     {
         if (partner==null)
@@ -156,9 +154,7 @@ public class ANITAs_BLACKBOARD : Blackboard, IDialogSystem
             partner.BeTold(utterances[index]);
             return true;
         }
-
     }
-
     public void BeTold(string sentence)
     {
         throw new System.NotImplementedException();

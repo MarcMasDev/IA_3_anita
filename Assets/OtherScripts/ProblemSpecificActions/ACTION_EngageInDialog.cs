@@ -32,9 +32,5 @@ public class ACTION_EngageInDialog : Action
                 return Status.SUCCEEDED;
             else return Status.FAILED;
         }
-
     }
-
-    
-
 }

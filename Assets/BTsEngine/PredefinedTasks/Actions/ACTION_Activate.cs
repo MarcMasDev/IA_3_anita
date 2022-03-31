@@ -3,7 +3,6 @@ using BTs;
 
 public class ACTION_Activate : Action
 {
-
     public string keyTarget;
 
     public ACTION_Activate(string keyTarget) {
